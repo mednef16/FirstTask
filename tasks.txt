@@ -1,0 +1,8 @@
+1-fix the errors in the code 
+2-add a class called Colum that have same functionalities as a Row 
+
+3-create a variable in main Colum column that has 6 text children
+
+4-add a print for both row and column
+
+5-change the first child of each of row and column to "row0" and "colum0" respectively with the classes functions  and re print them 
