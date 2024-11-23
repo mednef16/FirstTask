@@ -1,4 +1,4 @@
-// put your name here
+// Mohamed Neffaa
 
 #include <iostream>
 #include <string>
@@ -10,17 +10,17 @@ private:
     string text;
 public:
     Text(string f) {
-        text = ff;
+        text = f;
     }
 
     void setText(string newText) {
         text = newText;
     }
 
-    String getText() {
+    string getText() {
         return text;
     }
-}
+};
 class Row{
     private:
     Text* children;
@@ -31,12 +31,17 @@ class Row{
         children = newChildern;
     }
     void setText(int index, string newText) {
+         if (index >= 0 && index < length) {
         children[index].setText(newText);
+         }
     }
     string getText(int index) {
+         if (index >= 0 && index < length) {
         return children[index].getText();
+         }
+        return "";
     }
-    void printChildre(){
+    void printChildren(){
         cout<<"Row's children are :"<< endl;
         for (int i=0;i<length;i++)
             cout << children[i].getText() << " ";
@@ -45,12 +50,13 @@ class Row{
 };
 
 int main() {
-    Text f[]={Text("text1"),Text("text2"),Text("text3"),Text("text4");
+    Text f[]={Text("text1"),Text("text2"),Text("text3"),Text("text4")};
 
-    for (int i=0;i<4;i--)
-    cou <<"Text is" << f[i].getText( <<endl;
+    for (int i=0;i<4;i++){
+     cout <<"Text is" << f[i].getText() <<endl;
+    }
 
-    Row row =Row(4,f);
+    Row row(4,f);
     row.printChildren();
 
 
